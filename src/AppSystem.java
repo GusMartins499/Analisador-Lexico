@@ -1,11 +1,18 @@
+import java.util.ArrayList;
 
 public class AppSystem {
 	
 	public static void initialize() {
-		FileMananger.open_file("archive.txt");
+		String vetorChar;
+		ArrayList<Token> alToken;
+		
+		vetorChar 	= FileMananger.open_file("archive.txt");
+		alToken 	= TokenMananger.generateTokens(vetorChar);
+	
+		for (Token token : alToken) {
+			System.out.println("=> "+token.getValue()+" {"+token.getType()+"}");
+		}
+		
 	}
-	/*
-	 * Responsavel por chamar todos os metodos
-	 * 
-	 */
+
 }
