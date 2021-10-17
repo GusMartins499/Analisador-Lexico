@@ -10,8 +10,14 @@ public class AppSystem {
 		alToken 	= TokenMananger.generateTokens(vetorChar);
 	
 		for (Token token : alToken) {
-			System.out.println("=> "+token.getValue()+" {"+token.getType()+"}");
+			if(token.getType() == Token.TYPE_ENDLINE) {
+				System.out.println(" "+token.getValue()+" {"+token.getType()+"}");
+			}else{
+				System.out.print(" "+token.getValue()+" {"+token.getType()+"}");
+			}
 		}
+		
+		TokenMananger.analLex(alToken);
 		
 	}
 
