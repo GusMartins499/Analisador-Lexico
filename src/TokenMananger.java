@@ -43,11 +43,7 @@ public class TokenMananger {
 				}
 
 				if(alToken.get(i-1).getType() != Token.TYPE_IDENTIFICADOR) {
-					System.err.println("Erro | Atribuição incorreta | Linha: "+ countLine);
-				}
-				
-				if(alToken.get(i-1).getType() != Token.TYPE_IDENTIFICADOR) {
-					System.err.println("Erro | Atribuição incorreta | Linha: "+ countLine);
+					System.err.println("Erro | Atribuicao incorreta | Linha: "+ countLine);
 				}
 
 			}
@@ -59,12 +55,12 @@ public class TokenMananger {
 				
 				if(alToken.get(i+1).getType() != Token.TYPE_NUMERICO &&
 						alToken.get(i+1).getType() != Token.TYPE_IDENTIFICADOR) {
-					System.err.println("Erro | Operacação incorreta | Linha: "+ countLine);
+					System.err.println("Erro | Operacao incorreta | Linha: "+ countLine);
 				}
 
 				if(alToken.get(i-1).getType() != Token.TYPE_NUMERICO &&
 						alToken.get(i-1).getType() != Token.TYPE_IDENTIFICADOR) {
-					System.err.println("Erro | Operacação incorreta | Linha: "+ countLine);
+					System.err.println("Erro | Operacao incorreta | Linha: "+ countLine);
 				}
 				
 			}
@@ -73,8 +69,8 @@ public class TokenMananger {
 			// VERIFICACOES DE RESERVADAS
 			///////////////////////////
 			if(alToken.get(i).getType() == Token.TYPE_RESERVADA) {
-				if(alToken.get(i).getType() != Token.TYPE_IDENTIFICADOR) {
-					System.err.println("Erro | Declaração de variavel invalida | Linha: "+ countLine);
+				if(alToken.get(i+1).getType() != Token.TYPE_IDENTIFICADOR) {
+					System.err.println("Erro | Declaracao de variavel invalida | Linha: "+ countLine);
 				}
 			}
 			

@@ -1,3 +1,10 @@
+int x = 10;
+int y = 15;
+int z = 0;
+
+z = x + y;
+
+
 1 = value;
 value =;
 1 =;
